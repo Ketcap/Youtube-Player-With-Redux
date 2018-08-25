@@ -1,0 +1,23 @@
+.contentContainer{
+	display: flex;
+	flex-direction: column;
+}
+.channelList{
+	height:auto;
+	padding:10px;
+	margin-left:1em;
+	display: inline-flex;
+	flex-direction: row;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+.videoList{
+	height:auto;
+	padding:10px;
+	margin-left:1em;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+	flex-grow: 0;
+	flex-shrink: 0;
+}

@@ -1,0 +1,31 @@
+.videoContainer{
+	display: flex;
+	flex-direction: column;
+	max-width: 340px;
+	flex-wrap: wrap;
+	margin: .5em;
+	padding-bottom:.5em;
+	transition:all .2s ease-in;
+	background: transparent;
+	&:hover{
+		background: #fff;
+		box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	}
+	color:#000000
+}
+.thumbnail{
+	width: 100%;
+	margin-bottom:.3em;
+}
+.description{
+	padding:.5em;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+}
+.info{
+	padding:.5em;
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 8px;
+}

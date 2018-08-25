@@ -1,0 +1,35 @@
+.video_player_container{
+	background:#efefef;
+	position: fixed;
+	right:0;
+	bottom:0;
+	transition:all .5s ease-in;
+	&.closed{
+		right:calc(50% - 320px);
+		bottom:-500px;
+	}
+	&.open{
+		top:0;
+		right:0;
+		left:256px;
+	}
+	&.minimized{
+		right:0;
+		top:calc(100% - 390px);
+		left:calc(100% - 540px);
+	}
+	display: flex;
+	flex-direction: column;
+}
+.buttons{
+	height:30px;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+.videoContainer{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}

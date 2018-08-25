@@ -1,0 +1,24 @@
+.channel{
+	// overflow: hidden;
+	margin:.5em;
+	display: flex;
+	border-radius:100%;
+	width: 55px;
+	display:flex;
+	flex-wrap: wrap;
+}
+.responsiveImg{
+	width: 53px;
+	height: 53px;
+	border:2px solid #FD251C;
+	border-radius:53px;
+	margin-bottom:3px;
+}
+.title{
+	width: 100%;
+	font-size:12px;
+	text-align: center;
+	text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

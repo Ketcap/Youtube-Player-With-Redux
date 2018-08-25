@@ -1,0 +1,19 @@
+.link{
+	text-decoration: none;
+	color: #777777;
+	padding: .5em 2em;
+	display: flex;
+	align-items: center;
+	transition: all .15s ease-out;
+	&:hover{
+		background-color:#efefef;
+	}
+}
+.icon{
+	width: 20px;
+	margin-right: 15px
+}
+.title{
+	height: 100%;
+	align-items: center;
+}
