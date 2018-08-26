@@ -1,3 +1,4 @@
+import React from 'react'
 import { combineReducers } from 'redux'
 import {
 	START_SEARCH, GET_RESULTS, RESET
@@ -5,6 +6,9 @@ import {
 import {
 	VIDEO_START, ADD_LIST, TOGGLE, CLOSE
 } from './video_player';
+
+import { toast } from 'react-toastify';
+
 
 function Youtube_Reducers(
 	state = {
@@ -53,7 +57,7 @@ function Video_Player(
 		isClosed: true,
 		isMinimized: false,
 		playlist: [],
-		current: null
+		video: {}
 	},
 	action
 ) {
@@ -63,12 +67,13 @@ function Video_Player(
 				...state,
 				isClosed: false,
 				isMinimized: false,
-				current: action.videoId
+				video: action.video
 			}
 		case ADD_LIST:
+			toast(({ closeToast }) => <div><b>{action.video.snippet.title}</b> added to playlist</div>);
 			return {
 				...state,
-				playlist: [...state.playlist, action.videoId]
+				playlist: [...state.playlist, action.video]
 			}
 		case TOGGLE:
 			return {
@@ -80,7 +85,7 @@ function Video_Player(
 				...state,
 				isClosed: true,
 				isMinimized: false,
-				current: null
+				video: {}
 			}
 		default:
 			return state

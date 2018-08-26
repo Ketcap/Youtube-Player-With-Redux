@@ -5,15 +5,37 @@
 	width: 256px;
 	flex-grow: 0;
 	flex-shrink: 0;
+	transition:all .3s linear;
+	&.menuClose{
+		width: 75px;
+		.logo{
+			opacity:0
+		}
+		a > span {
+			transition:all .3s linear;
+			opacity: 0;
+		}
+		+ div{
+			transition:all .3s linear;
+			padding-left:75px !important;
+		}
+	}
 }
 .logo{
+	margin-top:25px;
 	width: 100%;
 	height: 80px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transition:all .3s linear;
 }
 .list{
 	display: flex;
 	flex-direction: column,
+}
+.menuIcon{
+	position: absolute;
+	right: 10px;
+	top:5px;
 }

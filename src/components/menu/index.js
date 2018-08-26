@@ -4,23 +4,32 @@ import Style from './index.module.scss';
 
 import MenuItem from '../menu_item';
 
-import HomeIcon from '../../public/icon/home_icon.svg';
-import StarIcon from '../../public/icon/star_icon.svg';
-import History from '../../public/icon/history.svg';
+import Icon from 'react-icons-kit';
+import { menu as menuIcon, home, star, list } from 'react-icons-kit/feather/';
 
 import Youtube from '../../public/img/youtube.png';
 
 class Menu extends Component {
+	state = {
+		menu: true
+	}
+	toggleMenu = () => {
+		this.setState(prev => ({
+			menu: !prev.menu
+		}))
+	}
 	render() {
+		const { menu } = this.state;
 		return (
-			<div className={Style.menu}>
+			<div className={`${Style.menu} ${!menu ? Style.menuClose : ''}`}>
+				<Icon onClick={this.toggleMenu} icon={menuIcon} size={24} className={Style.menuIcon} />
 				<div className={Style.logo}>
 					<img alt="youtube" src={Youtube} />
 				</div>
 				<div className={Style.list}>
-					<MenuItem icon={HomeIcon} title={'Homepage'} link={'/'} />
-					<MenuItem icon={StarIcon} title={'Trending'} link={'/'} />
-					<MenuItem icon={History} title={'History'} link={'/'} />
+					<MenuItem icon={home} title={'Homepage'} link={'/'} />
+					<MenuItem icon={star} title={'Trending'} link={'/'} />
+					<MenuItem icon={list} title={'History'} link={'/'} />
 				</div>
 			</div>
 		)

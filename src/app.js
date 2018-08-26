@@ -8,6 +8,9 @@ import Store from './redux/store';
 
 import { BrowserRouter } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.min.css';
+
 export default class App extends Component {
 	render() {
 		return (
@@ -20,6 +23,13 @@ export default class App extends Component {
 							<SearchList />
 							<VideoPlayer />
 						</div>
+						<ToastContainer
+							position="top-right"
+							autoClose={5000}
+							newestOnTop={false}
+							hideProgressBar
+							closeOnClick
+						/>
 					</div>
 				</Provider>
 			</BrowserRouter>

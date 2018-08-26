@@ -1,7 +1,10 @@
 .videoContainer{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	max-width: 340px;
+	min-width: 240px;
+	flex: 1;
 	flex-wrap: wrap;
 	margin: .5em;
 	padding-bottom:.5em;
@@ -13,11 +16,21 @@
 	}
 	color:#000000
 }
+.addList{
+	position: absolute;
+	top:0;
+	right:0;
+	padding: .3em;
+	background:rgba(0,0,0,.3);
+	color: #fff;
+}
 .thumbnail{
 	width: 100%;
 	margin-bottom:.3em;
+	cursor: pointer;
 }
 .description{
+	cursor: pointer;
 	padding:.5em;
 	font-size: 16px;
 	font-weight: 500;

@@ -28,8 +28,8 @@ class SearchList extends Component {
 				</div>
 				<div className={Style.videoList}>
 					{fetched && videos.length > 0 ?
-						videos.map(item => (
-							<VideoItem key={item.id.videoId}  {...item} />
+						videos.map(video => (
+							<VideoItem key={video.id.videoId} video={video} />
 						))
 						: null}
 				</div>

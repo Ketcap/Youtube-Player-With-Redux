@@ -1,16 +1,16 @@
 export const VIDEO_START = 'VIDEO_START'
-export function video_start(id) {
+export function video_start(video) {
 	return {
 		type: VIDEO_START,
-		videoId: id
+		video
 	}
 }
 
 export const ADD_LIST = 'ADD_LIST';
-function add_list(id) {
+export function add_list(video) {
 	return {
 		type: ADD_LIST,
-		videoId: id
+		video
 	}
 }
 
