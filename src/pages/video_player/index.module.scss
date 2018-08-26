@@ -5,18 +5,23 @@
 	bottom:0;
 	transition:all .5s ease-in;
 	&.closed{
-		right:calc(50% - 320px);
-		bottom:-500px;
+		top:100%;
+		left:100%;
+		bottom:0;
+		right:0;
+		opacity: 0;
 	}
 	&.open{
 		top:0;
 		right:0;
 		left:256px;
+		opacity: 1;
 	}
 	&.minimized{
 		right:0;
 		top:calc(100% - 390px);
 		left:calc(100% - 540px);
+		opacity: 1;
 	}
 	display: flex;
 	flex-direction: column;
